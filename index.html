@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akiubaid Artisan Elegance</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-M3t0I03BQGeHsoC7zM9XNqa7xwA6gjLChPpp4NzbdOfj1l5O6Y2H+bm4pXVpA+HTeU2x6dVb9GdBb3Lxh0w99Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+</head>
+</head>
+<body class="bg-gray-100">
+    <div class="bg-gray-100 py-2">
+        <div class="container mx-auto flex justify-between items-center text-sm text-gray-600 bg-gray-200">
+            <div class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="Nigeria Flag" class="h-4 w-6 mr-2">
+                <span>+234-90-2872 1794</span>
+            </div>
+            <div>
+                <a href="mailto:info@example.com" class="hover:underline">fatimadullahi@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-blue-500 p-4" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white font-bold text-xl">
+                <a href="#">
+                    <img src="img/logo.jpg" alt="Akiubaid Artisan Elegance" class="h-10 inline-block mr-2 rounded-lg"> Akiubaid Artisan Elegance
+                </a>
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+                    <li><a href="#services" class="text-white hover:text-gray-300">Services</a></li>
+                    <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+                    <li><a href="#contact" class="text-white hover:text-gray-300">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden">
+                <button @click="open = !open" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div x-show="open" @click.away="open = false" class="md:hidden">
+            <ul class="mt-2 space-y-2">
+                <li><a href="#" class="block text-white hover:bg-gray-700 p-2">Home</a></li>
+                <li><a href="#services" class="block text-white hover:bg-gray-700 p-2">Services</a></li>
+                <li><a href="#about" class="block text-white hover:bg-gray-700 p-2">About</a></li>
+                <li><a href="#contact" class="block text-white hover:bg-gray-700 p-2">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <section class="bg-cover bg-center h-96 text-purple" style="background-image: url('hero.jpg');">
+        <div class="container mx-auto h-full flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold">Welcome to Akiubaid Artisan Elegance</h1>
+                <p class="mt-2 text-lg">Your one-stop shop for catering, pastries, bead making, and hair styling</p>
+                <a href="#services" class="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="services" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Our Services</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pastry & Baking Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6" x-data="{ activeImage: 1 }" x-init="setInterval(() => { 
+                    activeImage = activeImage === 11 ? 1 : activeImage + 1 
+                    }, 3000)">
+                    <div>
+                        <template x-if="activeImage === 1">
+                            <img src="img/p1.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 2">
+                            <img src="img/p2.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 3">
+                            <img src="img/p3.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 4">
+                            <img src="img/p4.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 5">
+                            <img src="img/p5.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 6">
+                            <img src="img/p7.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 7">
+                            <img src="img/p8.jpeg" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 8">
+                            <img src="img/pastry 1.png" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 9">
+                            <img src="img/pastry 2.png" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 10">
+                            <img src="img/suage roll.png" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 11">
+                            <img src="img/p6.png" alt="Pastry & Baking" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Pastry & Baking</h3>
+                        <p class="mt-2 text-gray-700">Indulge in the sweet artistry of our pastry creations. Our expert pastry chefs craft delectable pastries, cakes, and confections that are not only visually stunning but also bursting with flavor. Perfect for celebrations or as a treat for yourself, our pastries are made with the finest ingredients and meticulous attention to detail.</p>
+                    </div>
+                </div>
+    
+                <!-- Catering Services Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6" x-data="{ activeImage: 1 }" x-init="setInterval(() => { 
+                    activeImage = activeImage === 11 ? 1 : activeImage + 1 
+                    }, 3000)">
+                    <div>
+                        <template x-if="activeImage === 1">
+                            <img src="img/c1.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 2">
+                            <img src="img/c2.jpeg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 3">
+                            <img src="img/c3.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 4">
+                            <img src="img/c4.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 5">
+                            <img src="img/c5.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 6">
+                            <img src="img/c6.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 7">
+                            <img src="img/c7.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 8">
+                            <img src="img/c8.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 9">
+                            <img src="img/c9.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 10">
+                            <img src="img/c0.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 11">
+                            <img src="img/c01.jpg" alt="Catering Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Catering Services</h3>
+                        <p class="mt-2 text-gray-700">Our catering services are crafted to bring both Nigerian and international cuisines to your events. Whether you're hosting a wedding, corporate event, or private gathering, our team of skilled chefs creates exquisite dishes that reflect the richness of Nigerian traditions and global flavors. From traditional Nigerian dishes like Jollof Rice and Egusi Soup to a variety of international options, we ensure that every meal is a culinary delight.</p>
+                    </div>
+                </div>
+    
+                <!-- Bead Making Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6" x-data="{ activeImage: 1 }" x-init="setInterval(() => { 
+                    activeImage = activeImage === 11 ? 1 : activeImage + 1 
+                    }, 3000)">
+                    <div>
+                        <template x-if="activeImage === 1">
+                            <img src="img/bead.png" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 2">
+                            <img src="img/bead1.png" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 3">
+                            <img src="img/bead2.png" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 4">
+                            <img src="img/bead3.png" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 5">
+                            <img src="img/bead4.png" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 6">
+                            <img src="img/bead5.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 7">
+                            <img src="img/bead6.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 8">
+                            <img src="img/bead7.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 9">
+                            <img src="img/bead8.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 10">
+                            <img src="img/bead10.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 11">
+                            <img src="img/bead11.jpg" alt="Bead Making" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Bead Making</h3>
+                        <p class="mt-2 text-gray-700">Discover the beauty and elegance of handcrafted bead jewelry. At Akiubaid Artisan Elegance, we design and create unique beadwork that reflects your personal style. Whether you're looking for a statement piece or a delicate accessory, our custom bead jewelry is perfect for adding a touch of sophistication to any outfit.</p>
+                    </div>
+                </div>
+    
+                <!-- Plaiting Services Card -->
+                <div class="bg-white shadow-lg rounded-lg p-6" x-data="{ activeImage: 1 }" x-init="setInterval(() => { 
+                    activeImage = activeImage === 8 ? 1 : activeImage + 1 
+                    }, 3000)">
+                    <div>
+                        <template x-if="activeImage === 1">
+                            <img src="img/hair1.png" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 2">
+                            <img src="img/hair2.png" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 3">
+                            <img src="img/hair3.png" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 4">
+                            <img src="img/hair4.png" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 5">
+                            <img src="img/hair5.png" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 6">
+                            <img src="img/hair6.jpg" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 7">
+                            <img src="img/hair7.jpg" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <template x-if="activeImage === 8">
+                            <img src="img/hair8.jpg" alt="Plaiting Services" class="h-48 w-full object-cover rounded-md">
+                        </template>
+                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Plaiting Services</h3>
+                        <p class="mt-2 text-gray-700">Transform your look with our professional hair styling services. Our talented stylists are dedicated to creating hairstyles that enhance your natural beauty and suit your individual preferences. From elegant updos for special occasions to trendy cuts and color treatments, we offer a range of services to keep you looking and feeling fabulous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+  
+    <section id="about" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">About Us</h2>
+            <p class="mt-4 text-gray-700 text-center">At Akiubaid Artisan Elegance, we are dedicated to celebrating the art of fine creativity in every detail. Founded with an unwavering passion for delivering not just exceptional quality but also meticulously personalized services, our business is committed to offering a diverse and ever-expanding range of offerings. Each service is thoughtfully designed to cater to your unique needs, ensuring that every interaction with us not only meets but exceeds your expectations. Whether it's for a special occasion or an everyday experience, we strive to elevate your experiences to new heights of elegance and sophistication, making every moment with Akiubaid Artisan Elegance truly unforgettable.</p>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Our Philosophy</h2>
+            <p class="mt-4 text-gray-700 text-center">At Akiubaid Artisan Elegance, we are dedicated to celebrating the art of fine creativity in every detail. Founded with an unwavering passion for delivering not just exceptional quality but also meticulously personalized services, our business is committed to offering a diverse and ever-expanding range of offerings. Each service is thoughtfully designed to cater to your unique needs, ensuring that every interaction with us not only meets but exceeds your expectations. Whether it's for a special occasion or an everyday experience, we strive to elevate your experiences to new heights of elegance and sophistication, making every moment with Akiubaid Artisan Elegance truly unforgettable.</p>
+        </div>
+    </section>
+    <section id="Commitment" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Commitment</h2>
+            <p class="mt-4 text-gray-700 text-center">Customer satisfaction is at the heart of what we do. We take pride in our work and are dedicated to understanding and exceeding your expectations. Our team is passionate about delivering exceptional results and creating memorable experiences tailored to your needs.</p>
+        </div>
+    </section>
+    <section id="join us" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Join Us on This Journey</h2>
+            <p class="mt-4 text-gray-700 text-center">Explore our services and experience the elegance and creativity that define Akiubaid Artisan Elegance. Whether you're planning a special event, seeking exquisite pastries, or looking for beautiful bead jewelry and hair styling, we are here to make your vision a reality.</p>
+            <p class="mt-4 text-gray-700 text-center">Thank you for choosing Akiubaid Artisan Elegance. We look forward to serving you and helping you create unforgettable moments.</p>
+        </div>
+    </section>
+
+
+   
+    <section id="contact" class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Contact Us</h2>
+            <form class="mt-8 max-w-md mx-auto bg-white shadow-md rounded-lg p-6" action="https://formspree.io/f/mzzpvzaj" method="POST">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="message">Message</label>
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send Message</button>
+                </div>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center items-center mb-4">
+                <!-- Facebook Icon -->
+                <a href="https://www.facebook.com/fatima.adullahi.545849" target="_blank" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                
+                <!-- Email Icon -->
+                <a href="mailto:fatimadullahi@gmail.com" class="mx-2 text-gray-400 hover:text-white">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                
+                <!-- First Phone Number -->
+                <a href="tel:+2348035090084" class="mx-2 text-gray-400 hover:text-white flex items-center">
+                    <i class="fas fa-phone fa-2x"></i>
+                    <span class="ml-2">+234 803 509 0084</span>
+                </a>
+    
+                <!-- Second Phone Number -->
+                <a href="tel:+2348123456789" class="mx-2 text-gray-400 hover:text-white flex items-center">
+                    <i class="fas fa-phone fa-2x"></i>
+                    <span class="ml-2">+234 902 872 1794</span>
+                </a>
+            </div>
+            <p class="text-gray-400">© 2024 Akiubaid Artisan Elegance. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
